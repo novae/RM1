@@ -15,7 +15,7 @@ public class ServidorHola extends UnicastRemoteObject implements InterfazHola {
     public static void main(String args[]){
         try{
             ServidorHola obj=new ServidorHola();
-            Naming.rebind("ServidorHola", obj);
+            Naming.rebind("/ServidorHola", obj);
             JOptionPane.showMessageDialog(null,"Objeto Registrado en el Servidor de Nombres");
         }
         catch(Exception e){
